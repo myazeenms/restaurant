@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Booking - Foodies Restaurant</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="index.html" style="display: flex; align-items: center; gap: 10px;">
+<img src="4.png" alt="Foodies Logo" style="height: 40px; width: 40px; border-radius: 50%;">
+<span>Foodies</span>
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); color: white; padding: 3rem 0; text-align: center;">
+<div class="container">
+<h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">Book Your Table</h1>
+<p style="font-size: 1.2rem; margin-bottom: 0;">Reserve your spot for an unforgettable dining experience</p>
+</div>
+</div>
+
+<!-- Booking Form -->
+<div class="container py-5">
+
+<!-- Booking Info Alert -->
+<div class="alert alert-info alert-dismissible fade show mb-4" role="alert">
+<strong>💡 Tip:</strong> Booking in advance helps us provide better service and ensure table availability. Peak hours: 6 PM - 9 PM.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="row g-5">
+
+<!-- Booking Form -->
+<div class="col-lg-7">
+<div class="form-container">
+<form id="bookingForm">
+
+<div class="row mb-3">
+<div class="col-md-6">
+<div class="form-group">
+<label for="name" class="form-label">Full Name *</label>
+<input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="email" class="form-label">Email Address *</label>
+<input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+</div>
+</div>
+</div>
+
+<div class="row mb-3">
+<div class="col-md-6">
+<div class="form-group">
+<label for="phone" class="form-label">Phone Number *</label>
+<input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="guests" class="form-label">Number of Guests *</label>
+<select id="guests" class="form-control" required>
+<option value="">Select number of guests</option>
+<option value="1">1 Guest</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+<option value="5">5 Guests</option>
+<option value="6">6 Guests</option>
+<option value="7">7 Guests</option>
+<option value="8">8+ Guests</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="row mb-3">
+<div class="col-md-6">
+<div class="form-group">
+<label for="date" class="form-label">Preferred Date *</label>
+<input type="date" id="date" class="form-control" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="time" class="form-label">Preferred Time *</label>
+<input type="time" id="time" class="form-control" required>
+</div>
+</div>
+</div>
+
+<div class="mb-3">
+<div class="form-group">
+<label for="occasion" class="form-label">Occasion (Optional)</label>
+<select id="occasion" class="form-control">
+<option value="">Select occasion</option>
+<option value="birthday">Birthday</option>
+<option value="anniversary">Anniversary</option>
+<option value="business">Business Meeting</option>
+<option value="casual">Casual Dinner</option>
+<option value="celebration">Celebration</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+
+<div class="mb-4">
+<div class="form-group">
+<label for="notes" class="form-label">Special Requests (Optional)</label>
+<textarea id="notes" class="form-control form-textarea" placeholder="Any dietary restrictions, seating preferences, or special requests..."></textarea>
+</div>
+</div>
+
+<div class="form-check mb-3">
+<input class="form-check-input" type="checkbox" id="terms" required>
+<label class="form-check-label" for="terms">
+I agree to receive booking confirmations and updates
+</label>
+</div>
+
+<button type="submit" class="btn btn-primary-custom w-100" style="background-color: var(--primary-color); border: none; color: white; padding: 12px; font-size: 1.1rem; font-weight: 600;">Confirm Booking</button>
+
+</form>
+</div>
+</div>
+
+<!-- Restaurant Info Sidebar -->
+<div class="col-lg-5">
+<div class="card shadow-md">
+<div class="card-body">
+<h5 class="card-title" style="color: var(--primary-color); font-weight: 700; margin-bottom: 1.5rem;">📋 Booking Guidelines</h5>
+
+<ul class="list-group list-group-flush mb-3">
+<li class="list-group-item"><span class="badge bg-success me-2">✓</span> Advance booking recommended</li>
+<li class="list-group-item"><span class="badge bg-success me-2">✓</span> 24-hour cancellation policy</li>
+<li class="list-group-item"><span class="badge bg-success me-2">✓</span> Free WiFi for guests</li>
+<li class="list-group-item"><span class="badge bg-success me-2">✓</span> Parking available</li>
+<li class="list-group-item"><span class="badge bg-success me-2">✓</span> Private events welcome</li>
+</ul>
+
+<hr>
+
+<h5 style="color: var(--primary-color); font-weight: 700; margin-bottom: 1rem;">⏱️ Table Duration</h5>
+<div class="progress mb-3" style="height: 8px;">
+<div class="progress-bar" style="width: 100%; background-color: var(--primary-color);"></div>
+</div>
+<small>Typically 90 minutes per seating</small>
+
+<hr>
+
+<h5 style="color: var(--primary-color); font-weight: 700; margin-bottom: 1rem;">🎯 Peak Hours</h5>
+<div class="badge bg-warning text-dark me-2">Lunch: 12-2 PM</div>
+<div class="badge bg-warning text-dark">Dinner: 6-9 PM</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+<div class="container py-4">
+<div class="row">
+<div class="col-md-3">
+<div class="footer-section">
+<h5>About Foodies</h5>
+<p style="color: #ccc; font-size: 0.95rem;">Bringing you authentic flavors and exceptional dining experiences since 2020.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="footer-section">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="booking.html">Book Table</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="footer-section">
+<h5>Contact Info</h5>
+<div class="footer-contact">📍 123 MG Road, Bangalore, Karnataka 560001</div>
+<div class="footer-contact">📞 +91 98765 43210</div>
+<div class="footer-contact">✉️ info@foodies.com</div>
+<div class="footer-contact">⏰ Mon-Sun: 11:00 AM - 10:00 PM</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="footer-section">
+<h5>Follow Us</h5>
+<div class="social-links">
+<a href="#" title="Facebook">f</a>
+<a href="#" title="Instagram">📷</a>
+<a href="#" title="Twitter">𝕏</a>
+<a href="#" title="LinkedIn">in</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2026 Foodies Restaurant. All rights reserved. | <a href="#" style="color: #999;">Privacy Policy</a> | <a href="#" style="color: #999;">Terms of Service</a></p>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for your booking! We will confirm your reservation shortly.');
+  this.reset();
+});
+</script>
+
+</body>
+</html>
